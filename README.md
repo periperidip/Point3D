@@ -5,3 +5,6 @@ Point3D is a Java library for implementing and utilising 3D coordinates in the J
 
 ## Implementing the Library
 To utilise the library, clone/download the code in your Computer and store it in a directory alongside your code (or whatever directory suits you) and just use the regular import statement ( ``` import <packagename> ``` ) to import the library into your program.
+
+## Functions And Classes
+The [JavaDoc](https://github.com/periperidip/Point3D/blob/master/doc/Point3D/Point3D.html) file for the code contains all the details regarding the functions and classes in the code.
