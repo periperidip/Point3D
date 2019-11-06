@@ -27,17 +27,13 @@ package Point3D;
 
 //import org.apache.harmony.misc.HashCode;
 /**
- * The Class Point2D represents a point whose data is given in high-precision
+ * The Class Point3D represents a point whose data is given in high-precision
  * values appropriate for graphical operations.
- * 
- * @since Android 1.0
  */
 public abstract class Point3D implements Cloneable {
     /**
-     * The Class Float is the subclass of Point2D that has all of its data
+     * The Class Float is the subclass of Point3D that has all of its data
      * values stored with float-level precision.
-     * 
-     * @since Android 1.0
      */
     public static class Float extends Point3D{
         /**
@@ -82,7 +78,7 @@ public abstract class Point3D implements Cloneable {
             return y;
         }
         @Override
-        public double getZ() {     //TODO check the func getZ()
+        public double getZ() {     
             return z;
         }
         /**
@@ -114,8 +110,6 @@ public abstract class Point3D implements Cloneable {
     /**
      * The Class Double is the subclass of Point2D that has all of its data
      * values stored with double-level precision.
-     * 
-     * @since Android 1.0
      */
     public static class Double extends Point3D {
         /**
@@ -320,6 +314,45 @@ public abstract class Point3D implements Cloneable {
         } catch (CloneNotSupportedException e) {
             throw new InternalError();
         }
+    }
+    /**
+     * 
+     * @param range
+     *                length of side of the square plane
+     * @param plane
+     *                anti-plane on which the coordinates are.
+     * @return a randomized Point3D object whose coordinates are lying in the given range on a plane.
+     */
+    public Point3D RandomCoordinateGenerator(double range, char plane) {
+    	
+    	double temp_x;
+    	double temp_y;
+    	double temp_z;
+    	
+        switch(plane)
+        { case 'x':  temp_x = 0;
+    			  	 temp_y = Math.random() * range;
+    	         	 temp_z = Math.random() * range;
+    	         	 break;
+          
+          case 'y' : temp_x = Math.random() * range;
+        		  	 temp_y = 0;
+        		  	 temp_z = Math.random() * range;
+        		  	 break;
+          
+          case 'z' : temp_x = Math.random() * range;
+				  	 temp_y = Math.random() * range;
+				  	 temp_z = 0;
+				  	 break;
+		  
+		  default  : temp_x = Math.random() * range;
+	    			 temp_y = Math.random() * range;
+	    	         temp_z = Math.random() * range;
+	    	         break;
+        }	         
+         Point3D demo_object = new Double(temp_x, temp_y, temp_z);
+    	
+    	 return demo_object;
     }
     @Override
     public int hashCode() {                //TODO IMPLEMENT HASHCODE
