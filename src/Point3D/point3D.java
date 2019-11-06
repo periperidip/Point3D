@@ -16,7 +16,7 @@
  */
 /**
  * @author Shourya Shukla
- * @version $alpha$
+ * @version $1.0$
  */
 
 /** @see https://docs.oracle.com/javase/7/docs/api/java/awt/geom/Point2D.html
@@ -356,6 +356,22 @@ public abstract class Point3D implements Cloneable {
          Point3D demo_object = new Double(temp_x, temp_y, temp_z);
     	
     	 return demo_object;
+    }
+    
+    /**
+     * 
+     * @param point_count
+     *                     Number of points to create
+     * @return Reference to an array containing the random points generated
+     */
+    public Point3D[] PointGenerator(int point_count) { //CHECK LINE 372
+    	Point3D Points[] = new Point3D[point_count];
+    	
+    	for(int i = 0; i <point_count; i++)
+    	{
+    		Points[i] = RandomCoordinateGenerator(double range, char plane);
+    	}
+    	return Points;
     }
     @Override
     public int hashCode() {                //TODO IMPLEMENT HASHCODE
