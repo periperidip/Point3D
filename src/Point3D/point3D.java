@@ -16,9 +16,12 @@
  */
 /**
  * @author Shourya Shukla
- * @version $Revision$
+ * @version $alpha$
  */
 
+/** @see https://docs.oracle.com/javase/7/docs/api/java/awt/geom/Point2D.html
+ *  for Point2D 
+ */
 
 //This is an extension to the Point2D library in Java.
 

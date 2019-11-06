@@ -1,0 +1,8 @@
+#Eclipse IDE settings folder
+
+*/.settings/
+
+#Eclipse IDE generated files
+
+*.classpath
+*.project

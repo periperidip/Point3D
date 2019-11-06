@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"Point3D","l":"Point3D.Double"},{"p":"Point3D","l":"Point3D.Float"},{"p":"Point3D","l":"Point3D"}]
