@@ -1,8 +1,28 @@
-#Eclipse IDE settings folder
+*target*
+*.jar
+*.war
+*.ear
+*.class
 
-*/.settings/
+# Eclipse IDE generated files
 
-#Eclipse IDE generated files
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
 
-*.classpath
-*.project
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch

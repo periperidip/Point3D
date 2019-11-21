@@ -27,8 +27,6 @@
 
 package Point3D;
 
-
-//import org.apache.harmony.misc.HashCode;
 /**
  * The Class Point3D represents a point whose data is given in high-precision
  * values appropriate for graphical operations.
@@ -358,28 +356,12 @@ public abstract class Point3D implements Cloneable {
     	 return demo_object;
     }
     
-    /**
-     * 
-     * @param point_count
-     *                     Number of points to create
-     * @return Reference to an array containing the random points generated
-     */
-    public Point3D[] PointGenerator(int point_count) { //CHECK LINE 372
-    	Point3D Points[] = new Point3D[point_count];
-    	
-    	for(int i = 0; i <point_count; i++)
-    	{
-    		Points[i] = RandomCoordinateGenerator(double range, char plane);
-    	}
-    	return Points;
-    }
     @Override
-    public int hashCode() {                //TODO IMPLEMENT HASHCODE
-        HashCode hash = new HashCode(); 
-        hash.append(getX());
-        hash.append(getY());
-        hash.append(getZ());
-        return hash.hashCode();
+    public int hashCode() {                
+		long l = java.lang.Double.doubleToLongBits(getZ());
+		l = l * 31 ^ java.lang.Double.doubleToLongBits(getY());
+		l = l * 31 ^ java.lang.Double.doubleToLongBits(getX());
+		return (int)((l >> 31) ^ l);
     }
     @Override
     public boolean equals(Object obj) {
