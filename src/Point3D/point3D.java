@@ -351,9 +351,10 @@ public abstract class Point3D implements Cloneable {
 	    	         temp_z = Math.random() * range;
 	    	         break;
         }	         
-         Point3D demo_object = new Double(temp_x, temp_y, temp_z);
+         
+        Point3D demo_object = new Double(temp_x, temp_y, temp_z);
     	
-    	 return demo_object;
+    	return demo_object;
     }
     
     @Override
